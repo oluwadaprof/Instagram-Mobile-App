@@ -12,15 +12,18 @@ const Header = () => {
       </TouchableOpacity>
 
       <View style={styles.iconsContainer}>
-        <TouchableOpacity>
+        {/* <TouchableOpacity>
           <Image
             source={{
               uri: "https://img.icons8.com/fluency-systems-regular/60/ffffff/plus-2-math.png",
             }}
             style={styles.icon}
           />
-        </TouchableOpacity>
+        </TouchableOpacity> */}
         <TouchableOpacity>
+          <View style={styles.indicator}>
+            <Text style={styles.unreadBadgeText}></Text>
+          </View>
           <Image
             source={{
               uri: "https://img.icons8.com/fluency-systems-regular/60/ffffff/like--v1.png",
@@ -72,14 +75,26 @@ const styles = StyleSheet.create({
     bottom: 18,
     width: 25,
     height: 18,
-    borderRadius:25,
-    alignItems: 'center',
-    justifyContent: 'center',
+    borderRadius: 25,
+    alignItems: "center",
+    justifyContent: "center",
     zIndex: 100,
   },
   unreadBadgeText: {
-    color: 'white',
-    fontWeight: 600
+    color: "white",
+    fontWeight: 600,
+  },
+  indicator: {
+    backgroundColor: "#ff3250",
+    position: "absolute",
+    left: 33,
+    bottom:19,
+    width: 7,
+    height: 7,
+    borderRadius: 25,
+    alignItems: "center",
+    justifyContent: "center",
+    zIndex: 100,
   },
 });
 
