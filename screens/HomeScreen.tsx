@@ -1,9 +1,11 @@
 import { SafeAreaView, StyleSheet, ScrollView } from "react-native";
 import React from "react";
 import Header from "@/components/home/Header";
+
+import { POSTS } from "@/data/post";
 import Stories from "@/components/home/Stories";
 import Post from "@/components/home/Post";
-import { POSTS } from "@/data/post";
+import BottomTabs, { BottomTabIcons } from "@/components/home/BottomTabs";
 
 const HomeScreen = () => {
   return (
@@ -15,6 +17,7 @@ const HomeScreen = () => {
           <Post post={post} key={index} />
         ))}
       </ScrollView>
+      <BottomTabs icons={BottomTabIcons} />
     </SafeAreaView>
   );
 };
