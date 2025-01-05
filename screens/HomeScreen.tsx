@@ -6,11 +6,13 @@ import { POSTS } from "@/data/post";
 import Stories from "@/components/home/Stories";
 import Post from "@/components/home/Post";
 import BottomTabs, { BottomTabIcons } from "@/components/home/BottomTabs";
+import { StackNavigationProp } from "@react-navigation/stack";
+import { ParamListRoute } from "@react-navigation/native";
 
-const HomeScreen = () => {
+const HomeScreen = ({ navigation }: { navigation: any }) => {
   return (
     <SafeAreaView style={styles.container}>
-      <Header />
+      <Header navigation={navigation} />
       <Stories />
       <ScrollView>
         {POSTS.map((post, index) => (

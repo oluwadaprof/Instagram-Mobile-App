@@ -58,9 +58,13 @@ const FormikPostUploader = () => {
               />
             </View>
           </View>
-          <Divider style={{width: '99%' , marginLeft: 2}} width={0.2} orientation="vertical" />
+          <Divider
+            style={{ width: "99%", marginLeft: 2 }}
+            width={0.2}
+            orientation="vertical"
+          />
           {/* Image URL Input */}
-          <View style={{marginHorizontal: 2}}>
+          <View style={{ marginHorizontal: 2 }}>
             <TextInput
               onChange={(e) => setThumbnailUrl(e.nativeEvent.text)}
               style={{ color: "white", fontSize: 18, height: "auto" }}
@@ -75,12 +79,13 @@ const FormikPostUploader = () => {
                 {errors.imageUrl}
               </Text>
             )}
-            <Button
-              onPress={() => handleSubmit}
-              title="Share"
-              disabled={!isValid}
-              style={{marginTop: 20}}
-            />
+            <View style={{ marginTop: 2 }}>
+              <Button
+                onPress={() => handleSubmit}
+                title="Share"
+                disabled={!isValid}
+              />
+            </View>
           </View>
         </>
       )}
